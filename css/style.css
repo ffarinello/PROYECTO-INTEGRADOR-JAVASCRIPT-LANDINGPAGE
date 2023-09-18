@@ -1,11 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400;1,700&display=swap");
+@font-face {
+    font-family: "Avenir";
+    src: url("../fonts/Avenir/Black.woff");
+}
+
+:root {
+    --first-color: #5f5dbd;
+    --second-color: #5e87b8;
+    --third-color: #83cee0;
+    --fourth-color: #a4fbe3;
+}
+
 body {
-    background: black;
-    color: #fcbe24;
+    background: whitesmoke;
+    color: black;
     padding: 0 24px;
     margin: 0;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Cascadia Code PL";
+    font-family: "Avenir", monospace, sans-serif; /* 'Playfair Display' */
+    margin-left: 300px; /* Deja espacio para el header lateral */
+    padding: 20px;
+}
+
+main{
+    .card-group{
+        display: flex;
+        gap: 30px;
+
+        .card{
+            display:flex;
+            flex-flow: column;
+            align-items: center;
+            width: 300px;
+            background-color: var(--second-color);
+            border: 1px solid grey;
+            
+            .card-img-top{
+                background-color: var(--third-color);
+                display: flex;
+                width: 300px;
+                height: 280px;
+                border: 1px solid grey;
+            }
+            
+            .card-title{
+                margin:20px;
+                color: white;
+                font-size: 2rem;
+            }
+            
+            .card-body{
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+
+
+            .card-text{
+                text-align: left;
+                font-size: 1.1rem;
+            }
+
+            .card-specifics-text{
+                max-width: 50%;
+                min-width: 20%;
+            }
+        }
+    }
+}
+
+/* footer{
+    text-align: center;
+    background-color: grey;
+    position: relative;
+    margin-left: 250px;
+    bottom: 0px;
+} */
+
+/* media queries */
+
+@media only screen and (min-width: 1024px) {
+    
+    /* header lateral */
+    .header-lateral {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--first-color);
+        width: 120px;
+        height: 100%;
+        color: #fff;
+        padding: 20px;
+
+        & ul {
+            list-style: none;
+            padding: 0;
+
+            & li {
+                margin-bottom: 10px;
+
+                & a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: bold;
+                    
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
 }
