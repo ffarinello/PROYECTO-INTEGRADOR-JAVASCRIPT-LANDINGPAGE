@@ -1,8 +1,15 @@
+/* fuentes */
+
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400;1,700&display=swap");
 @font-face {
     font-family: "Avenir";
-    src: url("../fonts/Avenir/Black.woff");
+    src: url("../fonts/AvenirBlack.woff");
 }
+@font-face{
+    font-family: "Cascadia Code PL";
+    src: url("../fonts/CascadiaCodePL.ttf")
+}
+
 
 :root {
     --first-color: #5f5dbd;
@@ -20,43 +27,40 @@ body {
     padding: 20px;
 }
 
-
-
 main {
     .card-group {
         margin-bottom: 40px;
-        cursor: pointer;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        justify-content: space-evenly;
-        align-items: center;
         display: grid;
-        gap: 20px;
-
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        align-items: center;
+        
         .card {
             background-color: var(--second-color);
-                border-radius: 10px;
-                width: 300px;
+            border-radius: 10px;
+            width: 300px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+            cursor: pointer;
 
-                .card-img-top {
+            .card-img-top {
                 background-color: var(--third-color);
                 width: 300px;                
                 border-bottom: 2px outset grey;
             }
 
             .card-title {
+                text-align: center;
                 margin: 20px;
                 color: white;
                 font-size: 2rem;
             }
 
             .card-body {
-                margin-top: 20px;
-                margin-left: 20px;
+                margin: 20px;
             }
 
             .card-text {
-                text-align: left;
+                font-family: "Cascadia Code PL";
+                text-align: justify;
                 font-size: 1.1rem;
             }
 
@@ -78,7 +82,7 @@ main {
 
 /* media queries */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1195px) {
     /* header lateral */
     .header-lateral {
         position: fixed;
@@ -110,8 +114,9 @@ main {
             }
         }
     }
-    & body{
-        margin-left: 200px; /* Deja espacio para el header lateral */
+    
+    body{
+        margin-left: 200px;
 
     }
 }
