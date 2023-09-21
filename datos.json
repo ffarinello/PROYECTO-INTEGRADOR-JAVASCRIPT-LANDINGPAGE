@@ -4,6 +4,7 @@
         "marca": "Logitech",
         "modelo": "G Pro Wireless",
         "img": "./img/gpro.png",
+        "sintesis": "Inalámbrico de alto rendimiento. Rápido y preciso.",
         "descripcion": "El Logitech G Pro Wireless es conocido por su conectividad inalámbrica ultrarrápida y su sensor HERO de alta precisión. Su diseño ergonómico y su peso ligero lo hacen perfecto para jugadores de eSports. Los botones programables y la duración de la batería son ideales para competencias intensas.",
         "especificaciones": [
             "Sensor: HERO de 25,000 DPI",
@@ -22,6 +23,7 @@
         "marca": "SteelSeries",
         "modelo": "Rival 600",
         "img": "./img/rival600.png",
+        "sintesis": "Experiencia adaptable para una extrema precisión.",
         "descripcion": "El SteelSeries Rival 600 es un mouse cableado con un sensor dual TrueMove3+ para una precisión extrema. Su diseño ambidiestro y peso ajustable se adaptan a cualquier estilo de juego. Los botones de respuesta rápida son ideales para juegos competitivos.",
         "especificaciones": [
             "Sensor: Dual TrueMove3+ de 12,000 DPI",
@@ -38,7 +40,8 @@
         "id": "3",
         "marca": "Glorious",
         "modelo": "Model O Wireless",
-        "img": "./img/modelOWire.png",
+        "img": "./img/model.png",
+        "sintesis": "Inalámbrico. Ultraligero de alta velocidad y precisión sin retrasos.",
         "descripcion": "El Glorious Model O Wireless es un ratón inalámbrico ultraligero con un sensor Pixart PMW-3370 de alta velocidad. Ofrece una conectividad sin retrasos y una larga duración de la batería. Ideal para jugadores que buscan velocidad y precisión.",
         "especificaciones": [
             "Sensor: Pixart PMW-3370 de 19,000 DPI",
@@ -57,6 +60,7 @@
         "marca": "Razer",
         "modelo": "DeathAdder V2 Pro",
         "img": "./img/v2pro.png",
+        "sintesis": "Inalámbrico. Ergonómico de perfecto agarre y rendimiento.",
         "descripcion": "El Razer DeathAdder V2 Pro es un mouse inalámbrico con un diseño ergonómico que se adapta a la mano. Su sensor Focus+ de 20,000 DPI y botones ópticos Razer ofrecen una ventaja competitiva. Perfecto para jugadores que buscan un agarre cómodo y un rendimiento excepcional.",
         "especificaciones": [
             "Sensor: Razer Focus+ de 20,000 DPI",
@@ -74,7 +78,8 @@
         "id": "5",
         "marca": "ASUS ROG",
         "modelo": "Gladius III Wired",
-        "img": "./img/gladius.webp",
+        "img": "./img/gladius.png",
+        "sintesis": "Estratégicamente preparado para un preciso control en tiempo real.",
         "descripcion": "El ASUS ROG Gladius III es un mouse cableado diseñado para juegos de estrategia en tiempo real. Ofrece un agarre personalizado y botones adicionales para acciones estratégicas. Su sensor óptico de alta precisión proporciona un control preciso.",
         "especificaciones": [
             "Sensor: Óptico avanzado de 19,000 DPI",
@@ -92,6 +97,7 @@
         "marca": "Logitech",
         "modelo": "G Pro X Superlight",
         "img": "./img/superlight.png",
+        "sintesis": "Rápido. Ultraligero. Diseñado específicamente para FPS.",
         "descripcion": "El Logitech G Pro X Superlight es un mouse ultraligero diseñado específicamente para juegos de disparos en primera persona (FPS). Ofrece una respuesta rápida y un diseño ambidiestro. Sus botones programables y sensor HERO 25K son ideales para un rendimiento excepcional en juegos de tiros.",
         "especificaciones": [
             "Sensor: HERO de 25,000 DPI",
@@ -110,6 +116,7 @@
     "marca": "Corsair",
     "modelo": "Dark Core RGB/SE Wired/Wireless",
     "img": "./img/darkpro.png",
+    "sintesis": "Versátil. Ergonómico. Personalizable de alta precisión.",
     "descripcion": "El Corsair Dark Core es un mouse versátil de alta gama que se puede usar con cable o de forma inalámbrica. Ofrece un diseño ergonómico personalizable y un sensor PMW3367 de alta precisión. Perfecto para una variedad de géneros de juegos y competiciones profesionales.",
     "especificaciones": [
         "Sensor: PMW3367 de 16,000 DPI",
