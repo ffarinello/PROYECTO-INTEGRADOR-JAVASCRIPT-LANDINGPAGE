@@ -35,50 +35,45 @@ main {
         align-items: center;
         
         .card {
-            background-color: var(--second-color);
+            background-color: #29323c;
             border-radius: 10px;
             width: 300px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 1);
             cursor: pointer;
 
-            .card-img-top {
-                background-color: var(--third-color);
-                width: 300px;                
-                border-bottom: 2px outset grey;
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                margin: 20px;
             }
+
+            /* .card-img-top {
+                background-color: var(--third-color);
+                border-bottom: 2px outset grey;
+            } */
 
             .card-title {
                 text-align: center;
-                margin: 20px;
                 color: white;
                 font-size: 2rem;
             }
 
-            .card-body {
-                margin: 20px;
+            .card-synthesis-text{
+                text-align: center;
             }
 
-            .card-text {
+            /* .card-text {
                 font-family: "Cascadia Code PL";
-                text-align: justify;
-                font-size: 1.1rem;
             }
 
             .card-specifics-text {
+                font-family: "Cascadia Code PL";
                 max-width: 50%;
                 min-width: 20%;
-            }
+            } */
         }
     }
 }
-
-/* footer{
-    text-align: center;
-    background-color: grey;
-    position: relative;
-    margin-left: 250px;
-    bottom: 0px;
-} */
 
 /* media queries */
 
