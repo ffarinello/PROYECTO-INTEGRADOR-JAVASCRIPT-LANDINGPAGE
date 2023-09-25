@@ -37,3 +37,18 @@ button {
         box-shadow: 1px 1px 10px pink;
     }
 }
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 300px 2fr;
+  
+    .info-text {
+      width: 500px;
+      display: grid;
+      grid-template-rows: 80px 200px 100px;
+    }
+  
+    .right-column {
+      /* Estilos para la columna derecha (imagen) */
+    }
+  }

@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if(mouseSeleccionado){
         
         // Crear elementos
-        const info = document.createElement("section"); // container
-        const infoText = document.createElement("div"); // div = titulo+details+specs
-        const infoImg = document.createElement("div")   // div = img
+        const infoMouse = document.createElement("section"); // container
+        const mouseText = document.createElement("div"); // div = titulo+details+specs
+        const mouseImg = document.createElement("div")   // div = img
 
         const titulo = document.createElement("h1");
         const details = document.createElement("p");
@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const img = document.createElement("img");
         
         // Aplicar clases
-        info.classList.add("contenedor");
-        infoText.classList.add("info-text");
-        infoImg.classList.add("info-img");
+        infoMouse.classList.add("contenedor");
+        mouseText.classList.add("info-text");
+        mouseImg.classList.add("info-img");
 
         titulo.classList.add("info-title");
         details.classList.add("info-details");
@@ -37,18 +37,23 @@ document.addEventListener("DOMContentLoaded", () => {
         titulo.textContent = `${mouseSeleccionado.marca + ' '  + mouseSeleccionado.modelo}`;
         img.setAttribute("src", `${mouseSeleccionado.img}`);
         details.textContent = `${mouseSeleccionado.descripcion}`;
-        specs.textContent = `${mouseSeleccionado.especificaciones}`;
+        mouseSeleccionado.especificaciones.forEach((especificacion) => {
+            const item = document.createElement('li');
+            item.textContent = especificacion;
+            specs.appendChild(item);
+        });
+        // specs.textContent = `${mouseSeleccionado.especificaciones}`;
 
         // Append child
-        infoText.appendChild(titulo);
-        infoText.appendChild(details);
-        infoText.appendChild(specs);
-
-        infoImg.appendChild(img);
-
-        info.appendChild(infoImg);
-        info.appendChild(infoText);
-
-        detalleMouse.appendChild(info);
+        mouseText.appendChild(titulo);
+        mouseText.appendChild(details);
+        mouseText.appendChild(specs);
+        
+        mouseImg.appendChild(img);
+        
+        infoMouse.appendChild(mouseImg);
+        infoMouse.appendChild(mouseText);
+        
+        detalleMouse.appendChild(infoMouse);
     };
 });
