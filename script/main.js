@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Agregar contenido
             img.setAttribute("src", `${mouse.img}`);
-            titulo.textContent = `${mouse.marca + ' '  + mouse.modelo}`;
+            titulo.textContent = `${mouse.marca} ${mouse.modelo}`;
             sintesis.textContent = `${mouse.sintesis}`;
 
             // evento

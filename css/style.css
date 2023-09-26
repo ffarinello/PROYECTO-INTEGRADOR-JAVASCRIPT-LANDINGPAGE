@@ -10,12 +10,12 @@
     src: url("../fonts/CascadiaCodePL.ttf")
 }
 
-
 :root {
-    --first-color: #5f5dbd;
-    --second-color: #5e87b8;
-    --third-color: #83cee0;
-    --fourth-color: #a4fbe3;
+    --first-color: #A85E54;
+    --second-color: #843126;
+    --third-color: #2C9AA8;
+    --fourth-color: #D6503E;
+    --fifth-color: #65DBEB;
 }
 
 body {
@@ -25,7 +25,6 @@ body {
     background-image: linear-gradient(to left, rgba(39, 57, 76, 1), rgba(39, 57, 76, 0.9));
     color: white;
 }
-
 
 .card-group {
     display: grid;
@@ -41,8 +40,6 @@ body {
         transition: box-shadow 300ms ease-in;
         cursor: pointer;
         
-       
-       
         .card-body {
             display: flex;
             flex-direction: column;
@@ -53,12 +50,16 @@ body {
             text-align: center;
             color: white;
         }
+
+        .card-image{
+            & img {
+                height: 300px;
+              }
+        }
     
         .card-synthesis-text{
             text-align: center;
         }
-    
-
     }
 }
 
