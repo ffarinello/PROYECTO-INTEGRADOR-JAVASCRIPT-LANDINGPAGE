@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Crear elementos
             const card = document.createElement("div");         //card-container
             const cardBody = document.createElement("div");     //div = title+sintesis
+            
             const img = document.createElement("img");          
             const titulo = document.createElement("h2");         
             const sintesis = document.createElement("p");      
@@ -46,3 +47,22 @@ document.addEventListener("DOMContentLoaded", () => {
 function mostrarDetallesDato(mouse) {
     window.location.href = `mouse.html?id=${mouse.id}`;
 }
+
+// transition de logo
+
+const span = document.querySelectorAll("span");
+const contenedor = document.querySelector("#logo");
+const imagen = document.getElementById("image");
+const texto = document.getElementById("text");
+
+contenedor.addEventListener("mouseover", () => {
+    imagen.style.display ="none";
+    texto.style.display = "block";
+    texto.style.fontSize = "1.7rem";
+    texto.style.color = "#7d5fab";
+});
+
+contenedor.addEventListener("mouseout", () => {
+    texto.style.display = "none";
+    imagen.style.display = "block";
+});

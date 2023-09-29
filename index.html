@@ -4,24 +4,32 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../css/style.css" />
-        <title>Landing Page</title>
+        <title>Choose your weapon</title>
     </head>
     <body>
-        <div>
-            <h1>Universo Gaming</h1>
-            <h2>Herramientas para la evolución</h2>
+        <div class="settings">
+            <span>LLEVANDO EL GAMING A OTRO NIVEL</span>
+            <select name="País">
+                <option value="value1"selected>🌐 Argentina</option>
+                <option value="value2">🌎 Brasil</option>
+                <option value="value3">🌍 México</option>
+            </select>
         </div>
         <header class="header-lateral">
             <nav class="navbar">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Acerca de nosotros</a></li>
-                </ul>
+                <img id="menu" src="./img/interface.png" alt="Menú" /><span>CHOOSE</span>
+                <div id="logo">
+                    <img id="image" src="./img/logo.png" alt="Logo" />
+                    <span id="text" class="hidden">YOUR</span>
+                </div>
+                <span>WEAPON</span><img id="search" src="./img/search.png" alt="Buscar" />
             </nav>
+            <div class="info">
+                <h3>No es sólo una herramienta. Es un instrumento de precisión que amplifica tu destreza.<!-- DUDOOOSO! --></h3>
+                <button id="btn"><a href="#productos">Elige tu arma</a></button>
+            </div>
         </header>
-        <main class="main-content">
+        <main class="main-content" id="productos">
             <div class="card-group" id="card-group">
                 <!-- Listado de productos -->
             </div>

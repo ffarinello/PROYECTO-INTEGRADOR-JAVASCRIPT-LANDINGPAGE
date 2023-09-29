@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const mouseHeader = document.createElement("div"); // div = nombre+precio+valoracion
         const mouseText = document.createElement("div"); // div = details+specs
         const mouseImg = document.createElement("div")   // div = img
-        const botones = document.createElement("div");
+        const botones = document.createElement("div"); // div = volver+comprar
         
         const titulo = document.createElement("h1");
         const precio = document.createElement("span");
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btnVolver.textContent = "Volver";
         btnVolver.addEventListener("click", () => {window.location.href = '../index.html'});
         // btn-comprar
-        btnComprar.textContent = "Comprar";
+        btnComprar.textContent = "Comprar ahora";
         btnVolver.addEventListener("click", () => {window.location.href = '../index.html'});
 
         // info-header
