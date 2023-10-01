@@ -3,46 +3,50 @@ fetch("datos.json")
     .then((datos) => localStorage.setItem("mouses", JSON.stringify(datos)));
 
 document.addEventListener("DOMContentLoaded", () => {
-    const groupCards = document.getElementById("card-group");           // container
+    const groupCards = document.getElementById("card-group"); // container
     const datosMouses = JSON.parse(localStorage.getItem("mouses"));
-
+    
     if (datosMouses) {
         datosMouses.forEach((mouse) => {
-
             // Crear elementos
-            const card = document.createElement("div");         //card-container
-            const cardBody = document.createElement("div");     //div = title+sintesis
+            const card = document.createElement("div"); //card-container
+            const cardBody = document.createElement("div"); //div = title+sintesis
             
-            const img = document.createElement("img");          
-            const titulo = document.createElement("h2");         
-            const sintesis = document.createElement("p");      
-
+            const img = document.createElement("img");
+            const titulo = document.createElement("h2");
+            const sintesis = document.createElement("p");
+            
             // Aplicar clases
             card.classList.add("card");
             cardBody.classList.add("card-body");
             img.classList.add("card-img");
             titulo.classList.add("card-title");
             sintesis.classList.add("card-synthesis");
-
+            
             // Agregar contenido
             img.setAttribute("src", `${mouse.img}`);
             titulo.textContent = `${mouse.marca} ${mouse.modelo}`;
             sintesis.textContent = `${mouse.sintesis}`;
-
+            
             // evento
             card.addEventListener("click", () => mostrarDetallesDato(mouse));
-            
+            card.addEventListener("mouseover", () => {
+                const miSonido = document.getElementById("miSonido");
+                miSonido.volume = 0.1;
+                miSonido.play(); // Reproducir el sonido cuando el mouse está sobre el objeto
+            });
+
             // Append child
             cardBody.appendChild(img);
             cardBody.appendChild(titulo);
             cardBody.appendChild(sintesis);
-            
             card.appendChild(cardBody);
-            
             groupCards.appendChild(card);
+
         });
     }
 });
+// sonido de cards
 
 function mostrarDetallesDato(mouse) {
     window.location.href = `mouse.html?id=${mouse.id}`;
@@ -56,7 +60,7 @@ const imagen = document.getElementById("image");
 const texto = document.getElementById("text");
 
 contenedor.addEventListener("mouseover", () => {
-    imagen.style.display ="none";
+    imagen.style.display = "none";
     texto.style.display = "block";
     texto.style.fontSize = "1.7rem";
     texto.style.color = "#7d5fab";

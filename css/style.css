@@ -1,6 +1,7 @@
 /* fuentes */
 
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @font-face {
     font-family: "Avenir";
     src: url("../fonts/AvenirBlack.woff");
@@ -40,6 +41,7 @@ div.settings {
         color: black;
     }
     & select {
+        background-color: var(--white-color);
         border: none;
     }
 }
@@ -62,10 +64,15 @@ header {
         justify-content: space-between;
         align-items: center;
         height: 50px;
-        background-color: transparent;
+        background-color: /* rgba(0, 10, 40, 0.7); */ black;
         padding: 10px 20px;
         z-index: 1;
 
+        #logo-container{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
         #search,
         #menu {
             height: 25px;
@@ -83,8 +90,9 @@ header {
         max-width: 400px;
         position: sticky;
         left: 150px;
-        font-family: "Avenir";
+        font-family: "Poppins";
         padding: 20px 30px;
+        height: light;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -130,6 +138,8 @@ a {
         cursor: pointer;
 
         .card-body {
+            font-family: "Poppins";
+            font-weight: bold;
             display: flex;
             flex-direction: column;
             padding: 10px;
