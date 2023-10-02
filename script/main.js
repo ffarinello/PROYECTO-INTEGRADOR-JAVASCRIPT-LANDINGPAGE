@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (datosMouses) {
         datosMouses.forEach((mouse) => {
             // Crear elementos
-            const card = document.createElement("div"); //card-container
+            const card = document.createElement("article"); //card-container
             const cardBody = document.createElement("div"); //div = title+sintesis
             
             const img = document.createElement("img");
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
             cardBody.appendChild(sintesis);
             card.appendChild(cardBody);
             groupCards.appendChild(card);
-
         });
     }
 });

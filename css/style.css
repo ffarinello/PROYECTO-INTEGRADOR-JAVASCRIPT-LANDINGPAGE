@@ -6,10 +6,6 @@
     font-family: "Avenir";
     src: url("../fonts/AvenirBlack.woff");
 }
-@font-face {
-    font-family: "Cascadia Code PL";
-    src: url("../fonts/CascadiaCodePL.ttf");
-}
 
 :root {
     --purple-color: #7d5fab;
@@ -90,7 +86,7 @@ header {
         max-width: 400px;
         position: sticky;
         left: 150px;
-        font-family: "Poppins";
+        font-family: "";
         padding: 20px 30px;
         height: light;
         display: flex;
@@ -109,7 +105,7 @@ header {
 
             &:hover {
                 cursor: pointer;
-                border: 3px double var(--purple-color);
+                border: 2px solid var(--purple-color);
                 background-color: transparent;
                 transition: background-color 300ms ease-out;
             }
