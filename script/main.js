@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             card.addEventListener("click", () => mostrarDetallesDato(mouse));
             card.addEventListener("mouseover", () => {
                 const miSonido = document.getElementById("miSonido");
-                miSonido.volume = 0.1;
+                miSonido.volume = 0.03;
                 miSonido.play(); // Reproducir el sonido cuando el mouse está sobre el objeto
             });
 

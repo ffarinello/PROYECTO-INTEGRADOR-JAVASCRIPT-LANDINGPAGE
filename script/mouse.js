@@ -14,12 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if(mouseSeleccionado){
         
         // Crear elementos
-        const infoMouse = document.createElement("section") // container
-        const mouseHeader = document.createElement("section"); // nombre+precio+valoracion
-        const textHeader = document.createElement("div") // precio+valoracion
-        const mouseText = document.createElement("div"); // details+specs
-        const mouseImg = document.createElement("div")   // img
-        const botones = document.createElement("div"); // volver+comprar
+        const mouseContainer = document.createElement("section") // .container {mouseHeader, mouseContent, botones}
+        const mouseHeader = document.createElement("section"); // .header {titulo, headerText}
+        const mouseContent = document.createElement("div"); // .content {contentText, contentImg}
+        const contentImg = document.createElement("div")   // .content-img {img}   
+        const botones = document.createElement("div"); // .button {btnVolver, btnComprar}
+        const headerText = document.createElement("div") // .header-text {precio, valoracion}
+        const contentText = document.createElement("div"); // .content-text {details, specs}
         
         const titulo = document.createElement("h1");
         const precio = document.createElement("span");
@@ -32,11 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const btnComprar = document.createElement("button");
         
         // Aplicar clases
-        infoMouse.classList.add("contenedor");
-        mouseHeader.classList.add("info-header");
-        textHeader.classList.add("header-text");
-        mouseText.classList.add("info-text");
-        mouseImg.classList.add("info-img");
+        mouseContainer.classList.add("container");
+        mouseHeader.classList.add("header");
+        headerText.classList.add("header-text");
+        mouseContent.classList.add("content");
+        contentText.classList.add("content-text")
+        contentImg.classList.add("content-img");
+
         botones.classList.add("botones");
         img.classList.add("mouse-img");
         btnVolver.classList.add("button");
@@ -45,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Agregar contenido
         // titulo de pagina
-        infoMouse.innerHTML = `<title>${mouseSeleccionado.marca} ${mouseSeleccionado.modelo}</title>`;
+        mouseContainer.innerHTML = `<title>${mouseSeleccionado.marca} ${mouseSeleccionado.modelo}</title>`;
         // info-header
         titulo.textContent = `${mouseSeleccionado.marca} ${mouseSeleccionado.modelo}`;
         precio.textContent = `Precio: ${mouseSeleccionado.precio}`;
@@ -73,20 +76,23 @@ document.addEventListener("DOMContentLoaded", () => {
         botones.appendChild(btnComprar);
         
         mouseHeader.appendChild(titulo);
-        mouseHeader.appendChild(textHeader);
-        textHeader.appendChild(valoracion);
-        textHeader.appendChild(precio);
+        mouseHeader.appendChild(headerText);
+
+        headerText.appendChild(valoracion);
+        headerText.appendChild(precio);
         
-        mouseText.appendChild(details);
-        mouseText.appendChild(specs);
+        mouseContent.appendChild(contentText);
+        mouseContent.appendChild(contentImg);
+
+        contentText.appendChild(details);
+        contentText.appendChild(specs);
+
+        contentImg.appendChild(img);
+
+        mouseContainer.appendChild(mouseHeader);
+        mouseContainer.appendChild(mouseContent);
+        mouseContainer.appendChild(botones);
         
-        mouseImg.appendChild(img);
-        
-        infoMouse.appendChild(mouseHeader);
-        infoMouse.appendChild(mouseText);
-        infoMouse.appendChild(mouseImg);
-        infoMouse.appendChild(botones);
-        
-        detalleMouse.appendChild(infoMouse);
+        detalleMouse.appendChild(mouseContainer);
     };
 });
